@@ -17,7 +17,7 @@ public class ArrayEx2 {
 		for(int i=0; i<arr1.length; i++) {
 			//arr1[i]=arr2[i];
 			tmp=arr2[i];
-			arr2[i]=arr1[i];
+			arr2[i]=arr1[i];	//임시 변수를 통한 배열의 교환 
 			arr1[i]=tmp;
 		}
 		System.out.printf("arr1 = %d %d %d %d%n", arr1[0], arr1[1], arr1[2], arr1[3]);
@@ -25,7 +25,7 @@ public class ArrayEx2 {
 		
 		for(int i=0; i<arr1.length; i+=1) {
 			tmparr[i]=arr2[i];
-			arr2[i]=arr1[i];
+			arr2[i]=arr1[i];	//임시 배열을 통한 배열의 교환
 			arr1[i]=tmparr[i];
 		}
 		System.out.printf("arr1 = %d %d %d %d%n", arr1[0], arr1[1], arr1[2], arr1[3]);
