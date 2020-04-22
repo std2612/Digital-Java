@@ -18,17 +18,18 @@ public class ArrayEx4 {
 		System.out.println();
 		// 내가 만든 풀이
 		int arr2[]=new int[3];
-		int cnt1=0;
-		for(int i=0; i<arr2.length; i++) {
+		int cnt1;
+		for(cnt1=0; cnt1<arr2.length; cnt1++) {
 			int random=(int)(Math.random()*(max-min+1))+min;
-			for(cnt1=0; cnt1<arr2.length; cnt1++) {
-				if(random==arr2[cnt1]) {
-					cnt1--;
+			int i=0;
+			for(i=0; i<cnt1; i++) {
+				if(random==arr2[i]) {
 					break;
 				}
-				if(random==arr2[cnt1]) {
-					arr[cnt1]=random;
-				}
+			}
+			if(i==cnt1) {
+					arr2[cnt1]=random;
+					cnt1++;
 			}
 		}
 		for(int tmp:arr2) {
