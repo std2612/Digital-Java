@@ -23,7 +23,7 @@ public class TestEx5 {
 				arr[j+1]=tmp;
 				}
 			}
-		}
+		} 
 		for(int tmp:arr) {
 			System.out.printf("%3d ", tmp); // 배열 확인용 출력
 		}
