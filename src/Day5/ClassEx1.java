@@ -14,6 +14,9 @@ public/*접근제한자*/ class ClassEx1/*클래스명*/ {
 		//DefaultClassEx2.main(null);
 		Point p1=new Point();
 		p1.x1=10;
+		p1=new Point(1,2);
+//		p1=new Point(3,4,5);
+//		p1=new Point(1);
 		// Point클래스의 x2는 접근제한자가 Private이기 때문에 다른 클래스에서 사용할 수 없다.
 		//p1.x2=10;
 	}
@@ -26,4 +29,15 @@ class Point{
 	private int y2;
 	public int x3;
 	public int y3;
+	public Point() {
+		x1=x2=x3=0;
+		y1=y2=y3=0;
+		System.out.println("Point의 기본 생성자 호출");
+	}
+	//생성자 오버로딩
+	public Point(int x, int y) {
+		x1=x2=x3=x;
+		y1=y2=y3=y;
+		System.out.println("Point의 생성자 오버로딩 호출");
+	}
 }
