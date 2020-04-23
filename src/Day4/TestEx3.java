@@ -26,7 +26,7 @@ public class TestEx3 {
 				min=arr[i];
 			}
 		}
-		System.out.printf("배열의 값 중 최대값은 %d이고 최소값은 %d이다",max, min); // 최대값과 최소값 출력
+		System.out.printf("배열의 값 중 최대값은 %d이고 최소값은 %d이다%n",max, min); // 최대값과 최소값 출력
 		
 	}
 
