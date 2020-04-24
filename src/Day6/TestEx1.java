@@ -13,7 +13,7 @@ public class TestEx1 {
 		 * abcde
 		 * */
 		for(int i=1; i<=5; i++)	{
-			for(char ch='a'; ch<='a'+i-1; ch++) {
+			for(char ch='a'; ch<='a'-1+i; ch++) {
 				System.out.print(ch);
 			}
 			System.out.println();
