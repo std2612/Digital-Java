@@ -49,10 +49,23 @@ public class TestEx1 {
 		for(x=0; x<arr.length; x++) {
 			for(y=0; y<arr[0].length; y++) {
 				System.out.printf("%2d ", arr[x][y]);
-				if(y==arr[0].length-1) {
-					System.out.println();
-				}
 			}
+			System.out.println();
 		}
+		for(int i=0, cnt=1; i<x; i++) {
+			for(int j=0; j<y; j++) {
+				System.out.printf("%2d ", cnt++);
+				//System.out.printf("%2d ",y*i+j+1);		// 배열없이 출력
+			}
+			System.out.println();
+		}
+		for(int i=1, cnt=1; i<=x; i++) {
+			for(int j=1; j<=y; j++) {
+				System.out.printf("%2d ", cnt++);
+				//System.out.printf("%2d ", y*(i-1)+j);
+			}
+			System.out.println();
+		}
+		
 	}
 }
