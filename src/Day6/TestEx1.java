@@ -12,12 +12,22 @@ public class TestEx1 {
 		 * abcd
 		 * abcde
 		 * */
-		for(int i=1; i<=5; i++)	{
-			for(char ch='a'; ch<='a'-1+i; ch++) {
+		for(int i=0; i<=4; i++)	{
+			for(char ch='a'; ch<='a'+i; ch++) {
 				System.out.print(ch);
 			}
 			System.out.println();
 		}
+		char ch='a';
+		for(int i=0; i<=4; i++)	{
+			for(int j=0; j<=i; j++) {
+				System.out.print((char)('a'+j));
+			}
+			System.out.println();
+		}
+		/* 문자 상수 a + 상수 1을 하면 자료형변환이 일어나지 않고 더해지기 때문에
+		 * 결과가 문자 b가 나오면 바로 문자형 변수 ch에 저장이 가능하다
+		 * */
 		/* 두 정수를 입력하면 다음과 같이 출력되도록 작성하세요.
 		 * 3 5
 		 *   1  2  3  4  5
