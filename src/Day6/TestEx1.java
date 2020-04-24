@@ -1,8 +1,8 @@
-package Day5_1;
+package Day6;
 
 import java.util.Scanner;
 
-public class Exam2 {
+public class TestEx1 {
 
 	public static void main(String[] args) {
 		/* 문제 다음과 같이 출력되도록 코드를 작성하세요
