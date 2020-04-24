@@ -34,26 +34,25 @@ public class TestEx1 {
 		 *   6  7  8  9 10
 		 *  11 12 13 14 15 
 		 * */
-		int i, j;
+		int x, y;
 		System.out.print("두 정수를 입력하세요 : ");
 		Scanner scan=new Scanner(System.in);
-		i=scan.nextInt();
-		j=scan.nextInt();
+		x=scan.nextInt();
+		y=scan.nextInt();
 		scan.close();
-		int arr[][]=new int[i][j];
-		for(i=0; i<arr.length; i++) {
-			for(j=0; j<arr[0].length; j++) {
-				arr[i][j]=i*5+j+1;
+		int arr[][]=new int[x][y];
+		for(x=0; x<arr.length; x++) {
+			for(y=0; y<arr[0].length; y++) {
+				arr[x][y]=arr[0].length*x+y+1;
 			}
 		}
-		for(i=0; i<arr.length; i++) {
-			for(j=0; j<arr[0].length; j++) {
-				System.out.printf("%2d ", arr[i][j]);
-				if(j==arr[0].length-1) {
+		for(x=0; x<arr.length; x++) {
+			for(y=0; y<arr[0].length; y++) {
+				System.out.printf("%2d ", arr[x][y]);
+				if(y==arr[0].length-1) {
 					System.out.println();
 				}
 			}
 		}
 	}
-
 }
