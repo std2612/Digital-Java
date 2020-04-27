@@ -32,11 +32,10 @@ class KIACar {
 	private static int salesNumber=0;
 	
 	// 객체 변수
-	int wheel;
-	boolean power;
-	int speed;
-	String carName;
-	String carNum;
+	private int wheel;
+	private boolean power;
+	private int speed;
+	private String carName;
 		
 	// 클래스 메소드
 	public static String getManufacturer() {
