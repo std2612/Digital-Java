@@ -15,13 +15,24 @@ public class ModifierEx1 {
 //		A a=new A();
 //		d.print1(a);
 		d.print1(new A());
+		d.print1(new A());
+		d.print1(new A(1,2));
+		d.print1(new A(1,2));
+		
 		
 	}
 
 }
 // final 클래스는 부모가 될 수 없다.
 final class A{
-	public int a;
+	public int a,b;
+	public A() {
+		
+	}
+	public A(int a, int b) {
+		this.a=a;
+		this.b=b;
+	}
 }
 class B /*extends A*/{
 	// final 메서드는 오버라이딩할 수 없다.
