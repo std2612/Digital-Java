@@ -16,7 +16,9 @@ public class Shape{
 		System.out.printf("세로 : %.2f\n",height);
 		System.out.println("----------------------");
 	}
-	public Shape() {	count++; }
+	public Shape() {
+		count++;
+	}
 	public Shape(int left, int up, double width, double height) {
 		this.left = left;
 		this.up = up;
