@@ -26,7 +26,12 @@ public class PolymorphismEx2 {
 		System.out.println("--입고된 차량 리스트--");
 		for(Car tmp:arr) {
 			if(tmp!=null) {
-				System.out.println(tmp.manufacturer+" "+tmp.name);
+				if(tmp instanceof KIACar) {
+					System.out.println(tmp.manufacturer+" "+tmp.name+" "+((KIACar)tmp.KIA);
+				}
+				if(tmp instanceof HYUNDAICar) {
+					System.out.println(tmp.manufacturer+" "+tmp.name+" "+((HYUNDAICar)tmp.HYUNDAI);
+				}
 			}
 		}
 	}
