@@ -51,7 +51,7 @@ class Tv {
 			System.out.println("스마트TV");
 		}
 	}
-	
+
 }
 class CaptionTv extends Tv {
 	String text;
