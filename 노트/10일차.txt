@@ -28,3 +28,24 @@ abstract 리턴타임 메서드명(매개변수);
 인터페이스를 기능 요약서
 
 인터페이스는 자체적으로 사용할 수 없고 인터페이스를 구현한 클래스로 활용한다.
+
+인터페이스는 멤버 변수가 없기 때문에 기능을 메소드로 정리할 때 항상 이 부분을
+염두하고 작성해야한다.
+
+클래스의 상속 : 부모가 1명(단일상속)
+인터페이스의 상속 : 부모가 여러 명일 수 있다.(다중상속)
+interface A{
+	public void test(){}
+}
+interface B{
+	public void test(){}
+}
+interface extends A,B{
+}
+
+클래스는 interface를 이용하여 구현도 가능하고 상속도 가능
+class A extends B implements C{
+}
+
+A,B : 클래스
+C : 인터페이스
