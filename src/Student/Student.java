@@ -42,13 +42,14 @@ public class Student {
 		else return true;
 	}
 	Student(){
-		
+		count++;
 	}
 	Student(int grade, int classNum, int num, String name){
 		this.grade=grade;
 		this.classNum=classNum;
 		this.num=num;
 		this.name=name;
+		count++;
 	}
 	public void setScore(Subject...score) {
 		this.score=new Subject[score.length];

@@ -1,27 +1,34 @@
 package Student;
 
-public class Manage implements ManageInterface {
+import java.util.Scanner;
 
+public class Management implements ManagementInterface {
+	Scanner scan=new Scanner(System.in);
+	
 	@Override
 	public void insertStudent() {
+		int grade;
+		int classNum;
+		int num;
+		String name="";
+		Student arr[]=
+		
+		
 		
 	}
 
 	@Override
 	public void modifyStudent() {
-		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public void deleteStudent() {
-		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public void printStudent() {
-		// TODO Auto-generated method stub
 		
 	}
 
