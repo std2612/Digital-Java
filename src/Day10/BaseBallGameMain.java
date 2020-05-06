@@ -36,6 +36,7 @@ public class BaseBallGameMain {
 		System.out.println("종료!");
 		scan.close();
 	}
+	
 	public static int strike(int []com, int [] user) {
 		int cnt = 0;
 		for(int i = 0; i<com.length; i++) {
