@@ -9,6 +9,7 @@ public class ExamCasting {
 		/*실수형 변수 dnum에 정수 1을 저장하면 자동 자료형 변환으로 1.00으로 저장된다.*/
 		double dnum = 1;
 		float fnum = (float)1.23;
+		
 		//float fnum = 1.23f;
 		/*자동 자료형 변환이 되는 경우
 		 *정수 -> 실수

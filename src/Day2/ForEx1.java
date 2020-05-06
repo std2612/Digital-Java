@@ -8,6 +8,7 @@ public class ForEx1 {
 		for(i=1; i<=5; i++) {
 			System.out.println("Hello World!" + i);
 		}
+		
 		System.out.println("-------------");
 		for(i=0; i<5; i++) {
 				System.out.println("Hello World!" + i);

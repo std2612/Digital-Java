@@ -8,6 +8,7 @@ public class ArrayEx1 {
 		/* 배열이 없으면 아래와 같이 5개의 정보를 입력받아 저장하려면 5개의 변수를 선언하고
 		 * Scanner를 통해 5번 직접 입력받는 코드를 작성해야 한다.
 		 * 하지만 배열을 이용하면 효율적으로 입력받는 코드를 작성할수 있다.*/
+		
 		Scanner scan=new Scanner(System.in);
 		/*
 		int n1, n2, n3, n4, n5;

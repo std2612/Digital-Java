@@ -20,6 +20,7 @@ public class MethodEx3 {
 		for(int tmp:arr) {
 			System.out.print(tmp+" ");
 		}
+		
 
 	}
 	public static void swap(int num1, int num2) {

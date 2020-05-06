@@ -7,6 +7,7 @@ public class DefaultClassEx1 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println("접근제한자 : public");
+		
 	}
 }
 /* DefaultClassEx2 클래스는 접근제한자가 default이므로 같은 패키지나 같은

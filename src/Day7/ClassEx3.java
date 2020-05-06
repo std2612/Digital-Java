@@ -22,6 +22,7 @@ public class ClassEx3 {
 			c2.printSpeed();
 		}
 		c2.power();
+		
 	}
 	
 }

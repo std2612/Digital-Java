@@ -6,7 +6,7 @@ public class Student {
 	private int classNum;
 	private int num;
 	private String name="";
-	private Subject kor, eng, math;
+	private Subject score[]; // 서브젝트 클래스
 	
 	// getter, setter 설정
 	public int getGrade() {
@@ -41,11 +41,27 @@ public class Student {
 		if(!this.name.equals(name)) return false;
 		else return true;
 	}
+	Student(){
+		
+	}
 	Student(int grade, int classNum, int num, String name){
 		this.grade=grade;
 		this.classNum=classNum;
 		this.num=num;
 		this.name=name;
+	}
+	public void setScore(Subject...score) {
+		this.score=new Subject[score.length];
+		for(int i=0; i<score.length; i++) {
+			//this.score[i]=score[i];
+			this.score[i]=new Subject(score[i]);
+			
+		}
+	}
+	public void printScore() {
+		for(Subject tmp:score) {
+			tmp.print();
+		}
 	}
 	
 }

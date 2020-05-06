@@ -3,23 +3,28 @@ package Student;
 public class Manage implements ManageInterface {
 
 	@Override
-	public int insertStudent(Student arr[], Student std) {
-		return 0;
-	}
-
-	@Override
-	public void modifyStudent(Student arr[], Student std) {
+	public void insertStudent() {
 		
 	}
 
 	@Override
-	public int deleteStudent(Student arr[], Student std) {
-		return 0;
+	public void modifyStudent() {
+		// TODO Auto-generated method stub
+		
 	}
 
 	@Override
-	public void printStudent(Student arr[], int num) {
+	public void deleteStudent() {
+		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	public void printStudent() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
 
 }
