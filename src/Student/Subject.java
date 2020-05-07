@@ -10,7 +10,7 @@ public class Subject {
 	
 	
 	public void print() {
-		System.out.println("---"+title+"성적---");
+		System.out.println("-"+title+" 성적-");
 		System.out.println("중간고사 : "+midterm);
 		System.out.println("기말고사 : "+finals);
 		System.out.println("수행평가 : "+performance);

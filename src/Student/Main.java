@@ -5,41 +5,43 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
-		String menu;
-		Student []arr = new Student[1000];
-		int cnt = 0;
-		System.out.println("메뉴");
-		System.out.println("1. 학생정보추가");
-		System.out.println("2. 학생정보수정");
-		System.out.println("3. 학생정보삭제");
-		System.out.println("4. 학생정보출력");
-		System.out.println("5. 종료");
-		System.out.print("메뉴 번호를 입력하세요 : ");
-		Scanner scan=new Scanner(System.in);
-		menu=scan.next();
-		switch(menu) {
-		case "1":
-			Management m=new Management();
-			m.insertStudent();
-			break;
-		case "2":
-			break;
-		case "3":
-			break;
-		case "4":
-			break;
-		case "5":
-			break;
-		default:
-			System.out.println("잘못된 메뉴입니다.");
+		Scanner sc=new Scanner(System.in);
+		Student[] std=new Student[1000];
+		Manager mng=new Manager();
+		int menu=0;
+		while(menu!=5) {
+			printMenu();
+			menu=sc.nextInt();
+			switch(menu) {
+			case 1:
+				mng.insertStudent();
+				break;
+			case 2:
+				System.out.println("학생정보수정");
+				break;
+			case 3:
+				System.out.println("학생정보삭제");
+				break;
+			case 4:
+				System.out.println("학생정보출력");
+				break;
+			case 5:
+				System.out.println("프로그램을 종료합니다.");
+				break;
+			default:
+				System.out.println("잘못된 메뉴입니다.");	
+			}
 		}
-		
-		Student s=new Student();
-		s.setScore(new Subject("국어",40,40,10,10),
-				new Subject("영어",40,40,10,10),
-				new Subject("수학",40,40,10,10));
-		s.printScore();
-		}
-	
 	}
-
+	public static void printMenu() {
+		System.out.println("------------");
+		System.out.println("1. 학생 정보 추가");
+		System.out.println("2. 학생 정보 수정");
+		System.out.println("3. 학생 정보 삭제");
+		System.out.println("4. 학생 정보 출력");
+		System.out.println("5. 종료");
+		System.out.println("------------");
+		System.out.print("메뉴 번호를 입력하세요 : ");
+	}
+	
+}

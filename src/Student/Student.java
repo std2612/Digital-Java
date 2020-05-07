@@ -59,10 +59,17 @@ public class Student {
 			
 		}
 	}
+	
 	public void printScore() {
 		for(Subject tmp:score) {
 			tmp.print();
 		}
 	}
-	
+	public void printStudent() {
+		System.out.println("학생 이름 : "+name);
+		System.out.println("학년  : "+grade);
+		System.out.println("반  : "+classNum);
+		System.out.println("번호 : "+num);
+	}
 }
+
