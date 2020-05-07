@@ -2,11 +2,11 @@ package Student;
 
 public class Student {
 	//멤버 변수 설정
-	private String name="";
-	private int grade;
-	private int classNum;
-	private int num;
-	private Subject score[];
+	String name="";
+	int grade;
+	int classNum;
+	int num;
+	Subject score[];
 	
 	//기능 설정
 	public boolean equal(int grade, int classNum, int num, String name) {

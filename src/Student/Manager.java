@@ -4,10 +4,9 @@ import java.util.Scanner;
 
 public class Manager {
 	static int count=0;	
+	Scanner sc=new Scanner(System.in);
 	public int insertStudent(Student[] arr, Student std) {
-		
-		Scanner sc=new Scanner(System.in);
-		
+				
 		System.out.print("이름을 입력하세요 :");
 		String name=sc.next();
 		std.setName(name);
@@ -38,27 +37,24 @@ public class Manager {
 				
 				System.out.print("과목 이름을 입력하세요 : ");
 				String title=sc.next();
-				subArr[i].setTitle(title);
-				
+								
 				System.out.print(title+"의 중간고사 점수를 입력하세요 : ");
 				int midterm=sc.nextInt();
-				
-				
+								
 				System.out.print(title+"의 기말고사 점수를 입력하세요 : ");
 				int finals=sc.nextInt();
 				
-
 				System.out.print(title+"의 수행평가 점수를 입력하세요 : ");
 				int performance=sc.nextInt();
 				
-
 				System.out.print(title+"의 출석 점수를 입력하세요 : ");
 				int attendance=sc.nextInt();
 				
-
+				subArr[i]=new Subject(title, midterm, finals, performance, attendance);
 				std.setScore(subArr[i]);
 			}
-			
+			std.printStdinfo();
+			std.printScore();
 			return 0;
 						
 		case 'n':
@@ -76,7 +72,9 @@ public class Manager {
 	}
 	
 	public void modifyStudent(Student[] arr, Student std) {
-		
+		System.out.print("수정할 학생의 이름을 입력하세요 : ");
+		String name=sc.next();
+		if(name.equals())
 	}
 
 	

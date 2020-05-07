@@ -1,11 +1,11 @@
 package Student;
 
 public class Subject {
-	private String title;
-	private int midterm;
-	private int finals;
-	private int performance;
-	private int attendance;
+	String title;
+	int midterm;
+	int finals;
+	int performance;
+	int attendance;
 	
 	
 	
