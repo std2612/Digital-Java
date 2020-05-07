@@ -2,77 +2,91 @@ package Student;
 
 import java.util.Scanner;
 
-
 public class Manager {
-	Scanner sc=new Scanner(System.in);
-	
-	public void insertStudent() {
-		Student std=new Student();
+	static int count=0;	
+	public int insertStudent(Student[] arr, Student std) {
 		
-		System.out.println("학생 정보 추가");
-		System.out.print("이름을 입력하세요 : ");
+		Scanner sc=new Scanner(System.in);
+		
+		System.out.print("이름을 입력하세요 :");
 		String name=sc.next();
-		System.out.print("학년을 입력하세요 : ");
-		int grade=sc.nextInt();
-		System.out.print("반을 입력하세요 : ");
-		int classNum=sc.nextInt();
-		System.out.print("번호을 입력하세요 : ");
-		int num=sc.nextInt();
-		
 		std.setName(name);
+		
+		System.out.print("학생의 학년을 입력하세요 : ");
+		int grade=sc.nextInt();
 		std.setGrade(grade);
+		
+		System.out.print("학생의 반을 입력하세요 : ");
+		int classNum=sc.nextInt();
 		std.setClassNum(classNum);
+		
+		System.out.print("학생의 번호를 입력하세요 : ");
+		int num=sc.nextInt();
 		std.setNum(num);
 		
-		System.out.print("과목 정보를 입력하시겠습니까?(y/n) : ");
+		System.out.print("과목 정보를 입력하시겠습니까?(y/n) :");
 		char haveSub=sc.next().charAt(0);
-		if(haveSub=='y') {
-			System.out.print("과목수를 입력하세요 : ");
-			int titleNum=sc.nextInt();
-			Subject[] sub=new Subject[titleNum];
-			for(int i=0; i<titleNum; i++) {
-				System.out.print("과목명을 입력하세요 : ");
-				String tit=sc.next();
-				System.out.print("중간고사 점수를 입력하세요 : ");
-				int mid=sc.nextInt();
-				System.out.print("기말고사 점수를 입력하세요 : ");
-				int fin=sc.nextInt();
-				System.out.print("수행평가 점수를 입력하세요 : ");
-				int per=sc.nextInt();
-				System.out.print("출석 점수를 입력하세요 : ");
-				int att=sc.nextInt();
-				std.setScore(new Subject(tit,mid,fin,per,att));
-						}
-			std.printStudent();
-			std.printScore();
-		}
-		if(haveSub=='n') {
-			System.out.println("과목이 없습니다.");
-			std.printStudent();
-		}
 		
-		if(haveSub!='y' && haveSub!='n') {
+		switch(haveSub) {
+		
+		case 'y':
+			
+			System.out.print("과목 수를 입력하세요 : ");
+			int subNum=sc.nextInt();
+			Subject[] subArr=new Subject[subNum];
+			for(int i=0; i<subNum; i++) {
+				
+				System.out.print("과목 이름을 입력하세요 : ");
+				String title=sc.next();
+				subArr[i].setTitle(title);
+				
+				System.out.print(title+"의 중간고사 점수를 입력하세요 : ");
+				int midterm=sc.nextInt();
+				
+				
+				System.out.print(title+"의 기말고사 점수를 입력하세요 : ");
+				int finals=sc.nextInt();
+				
+
+				System.out.print(title+"의 수행평가 점수를 입력하세요 : ");
+				int performance=sc.nextInt();
+				
+
+				System.out.print(title+"의 출석 점수를 입력하세요 : ");
+				int attendance=sc.nextInt();
+				
+
+				std.setScore(subArr[i]);
+			}
+			
+			return 0;
+						
+		case 'n':
+			System.out.println("과목 정보가 없습니다.");
+			std.printStdinfo();
+			return 1;
+		
+		default:
 			System.out.println("잘못된 입력입니다.");
-			std.printStudent();
+			std.printStdinfo();
+			return 2;
 		}
-		System.out.println("학생 수 : "+Student.count);
 		
 		
+	}
+	
+	public void modifyStudent(Student[] arr, Student std) {
 		
 	}
 
 	
-	public void modifyStudent() {
+	public int deleteStudent(Student[] arr, Student std) {
+		return 0;
 		
 	}
 
 	
-	public void deleteStudent() {
-		
-	}
-
-	
-	public void printStudent() {
+	public void printStudent(Student[] arr, Student std) {
 		
 	}
 

@@ -6,15 +6,18 @@ public class Main {
 
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
-		Student[] std=new Student[1000];
+		Student[] stdArr=new Student[1000];
 		Manager mng=new Manager();
 		int menu=0;
+		int count=0;
 		while(menu!=5) {
 			printMenu();
 			menu=sc.nextInt();
 			switch(menu) {
 			case 1:
-				mng.insertStudent();
+				Student std=new Student();
+				mng.insertStudent(stdArr, std);
+				
 				break;
 			case 2:
 				System.out.println("학생정보수정");
