@@ -10,10 +10,16 @@ public class Student {
 	
 	//기능 설정
 	public boolean equal(int grade, int classNum, int num, String name) {
-		if(this.grade != grade)	return false;
-		if(this.classNum != classNum) return false;
-		if(this.num != num) return false;
+		if(this.grade!=grade)	return false;
+		if(this.classNum!=classNum) return false;
+		if(this.num!=num) return false;
 		if(!this.name.equals(name))	return false;
+		return true;
+	}
+	public boolean equal2(Student s) {
+		if(this.grade!=s.grade)	return false;
+		if(this.classNum!=s.classNum) return false;
+		if(this.num!=s.num) return false;
 		return true;
 	}
 	
@@ -61,4 +67,25 @@ public class Student {
 		System.out.println("학생의 반 : "+classNum);
 		System.out.println("학생의 번호 : "+num);
 	}
+	public Subject[] getScore() {
+		return score;
+	}
+	public void addScore(Subject[] addScore) {
+		int aSize=0, bSize=0;
+		if(score!=null) {
+			aSize=score.length;
+		}
+		if(addScore!=null) {
+			bSize=addScore.length;
+		}
+		Subject[] tmp=new Subject[aSize+bSize];
+		for(int i=0; i<aSize; i++) {
+			tmp[i]=score[i];
+		}
+		for(int i=0; i<bSize; i++) {
+			tmp[aSize+i]=addScore[i];
+		}
+		score=tmp;
+	}
+	
 }
