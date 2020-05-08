@@ -203,92 +203,92 @@ public class Main {
 		s.setScore(subList);
 	}
 	
-	public static void modifyStd(Scanner sc, Student[] std, Student mdfStd, int cnt) {
-		if(std==null || mdfStd==null || cnt<=0)
-			return;
-		for(int i=0; i<cnt; i++) {
-			if(std[i].equal2(mdfStd)) {
-				System.out.println("-수정 메뉴-");
-				System.out.println("1. 학년 수정");
-				System.out.println("2. 반 수정");
-				System.out.println("3. 번호 수정");
-				System.out.println("4. 이름 수정");
-				System.out.println("5. 과목 수정");
-				System.out.print("메뉴 번호를 입력하세요 : ");
-				int change=sc.nextInt();
-				
-				if(change==1) {
-					System.out.print("몇 학년으로 수정할지 입력하세요 : ");
-					int grade=sc.nextInt();
-					std[i].grade=grade;
-				}
-				if(change==2) {
-					System.out.print("몇 반으로 수정할지 입력하세요 : ");
-					int classNum=sc.nextInt();
-					std[i].classNum=classNum;
-				}
-				if(change==3) {
-					System.out.print("몇 번으로 수정할지 입력하세요 : ");
-					int num=sc.nextInt();
-					std[i].num=num;
-				}
-				if(change==4) {
-					System.out.print("어떤 이름으로 수정할지 입력하세요  : ");
-					String name=sc.next();
-					std[i].name=name;
-				}
-				if(change==5) {
-					if(std[i].score==null) {
-						System.out.println("과목 정보가 없습니다.");
-						System.out.print("과목 정보를 입력하시겠습니까?(y/n) : ");
-						char addSub=sc.next().charAt(0);
-						switch(addSub) {
-						case 'y':	case 'Y':
-							inputSub(sc, mdfStd);
-							
-												
-							break;
-							
-						case 'n':	case 'N':
-							System.out.println("과목 정보를 입력받지 않았습니다.");
-							break;
-							
-						default:
-							System.out.println("잘못된 입력입니다.");
-							
-									
-						}
-					}
-					if(std[i].score!=null) {
-							modifySub(sc, std[i], std[i].score, std[i].score.length);
-						}	
-					}
-				return;
-				}
-			
-			}
-	
-		System.out.println("일치하는 학생 정보가 없습니다.");
-		return;
-	}
-			
-			
-				
-		
-	
-	public static void modifySub(Scanner sc, Student s, Subject[] subList, int subNum) {
-		if(subList!=null) {
-			System.out.print("과목을 추가하려면 a, 수정하려면 m을 입력하세요 : ");
-			char addOrModify=sc.next().charAt(0);
-			if(addOrModify=='a') {
-				
-			}
-			if(addOrModify=='m') {
-				
-			}
-		}
-		
-	}
+//	public static void modifyStd(Scanner sc, Student[] std, Student mdfStd, int cnt) {
+//		if(std==null || mdfStd==null || cnt<=0)
+//			return;
+//		for(int i=0; i<cnt; i++) {
+//			if(std[i].equal2(mdfStd)) {
+//				System.out.println("-수정 메뉴-");
+//				System.out.println("1. 학년 수정");
+//				System.out.println("2. 반 수정");
+//				System.out.println("3. 번호 수정");
+//				System.out.println("4. 이름 수정");
+//				System.out.println("5. 과목 수정");
+//				System.out.print("메뉴 번호를 입력하세요 : ");
+//				int change=sc.nextInt();
+//				
+//				if(change==1) {
+//					System.out.print("몇 학년으로 수정할지 입력하세요 : ");
+//					int grade=sc.nextInt();
+//					std[i].grade=grade;
+//				}
+//				if(change==2) {
+//					System.out.print("몇 반으로 수정할지 입력하세요 : ");
+//					int classNum=sc.nextInt();
+//					std[i].classNum=classNum;
+//				}
+//				if(change==3) {
+//					System.out.print("몇 번으로 수정할지 입력하세요 : ");
+//					int num=sc.nextInt();
+//					std[i].num=num;
+//				}
+//				if(change==4) {
+//					System.out.print("어떤 이름으로 수정할지 입력하세요  : ");
+//					String name=sc.next();
+//					std[i].name=name;
+//				}
+//				if(change==5) {
+//					if(std[i].score==null) {
+//						System.out.println("과목 정보가 없습니다.");
+//						System.out.print("과목 정보를 입력하시겠습니까?(y/n) : ");
+//						char addSub=sc.next().charAt(0);
+//						switch(addSub) {
+//						case 'y':	case 'Y':
+//							inputSub(sc, mdfStd);
+//							
+//												
+//							break;
+//							
+//						case 'n':	case 'N':
+//							System.out.println("과목 정보를 입력받지 않았습니다.");
+//							break;
+//							
+//						default:
+//							System.out.println("잘못된 입력입니다.");
+//							
+//									
+//						}
+//					}
+//					if(std[i].score!=null) {
+//							modifySub(sc, std[i], std[i].score, std[i].score.length);
+//						}	
+//					}
+//				return;
+//				}
+//			
+//			}
+//	
+//		System.out.println("일치하는 학생 정보가 없습니다.");
+//		return;
+//	}
+//			
+//			
+//				
+//		
+//	
+//	public static void modifySub(Scanner sc, Student s, Subject[] subList, int subNum) {
+//		if(subList!=null) {
+//			System.out.print("과목을 추가하려면 a, 수정하려면 m을 입력하세요 : ");
+//			char addOrModify=sc.next().charAt(0);
+//			if(addOrModify=='a') {
+//				
+//			}
+//			if(addOrModify=='m') {
+//				
+//			}
+//		}
+//		
+//	}
 	/* 리턴타입
 	 * int : 중복되면 중복된 번지를 알려주고, 중복 안되면 -1을 반환
 	 * boolean : 중복되면 true, 아니면 false
@@ -311,7 +311,7 @@ public class Main {
 	 * Student[] std
 	 * int cnt
 	 *  */
-	public static void ModifyStd(Scanner sc, Student[] std, int cnt) {
+	public static void modifyStd(Scanner sc, Student[] std, int cnt) {
 		System.out.println("수정할 학생의 정보를 입력하세요.");
 		Student tmpStd=searchInfo(sc);
 		int pos=isDup(std, tmpStd, cnt);
