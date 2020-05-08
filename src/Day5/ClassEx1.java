@@ -22,6 +22,7 @@ public/*접근제한자*/ class ClassEx1/*클래스명*/ {
 		
 	}
 }
+
 // point : 2차원 좌표 평면에서 점 1개를 나타내는 클래스
 class Point{
 	int x1; // x축의 좌표
