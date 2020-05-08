@@ -1,6 +1,6 @@
 package Day10;
 
-public class InnerClassEx1 {
+public class AnonymousClassEx1 {
 
 	public static void main(String[] args) {
 		C c=new C();
