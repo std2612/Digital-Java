@@ -74,7 +74,10 @@ public class Manager {
 	public void modifyStudent(Student[] arr, Student std) {
 		System.out.print("수정할 학생의 이름을 입력하세요 : ");
 		String name=sc.next();
-		if(name.equals())
+		for(int i=0; i<arr.length; i++)
+			if(name.equals(arr[i].getName())) {
+				
+			}
 	}
 
 	
