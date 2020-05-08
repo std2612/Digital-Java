@@ -24,6 +24,7 @@ public class FinalEx1 {
 		}
 		
 	}
+	
 }
 class C{}
 final class A extends C{
