@@ -8,6 +8,7 @@ public class InterfaceEx1 {
 
 }
 interface RemoCon{ // 인터페이스
+	
 	/*pulbic final*/int num=10;
 	public /*abstract*/ int chUp(int ch); // 추상메서드
 	public int chDown(int ch);
