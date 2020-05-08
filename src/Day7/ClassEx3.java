@@ -26,6 +26,7 @@ public class ClassEx3 {
 	}
 	
 }
+
 // 모닝, k3, 쏘렌토
 class KIACar {
 	// 클래스 변수
