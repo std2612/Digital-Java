@@ -11,6 +11,7 @@ public class ConstructorEx1 {
 	}
 
 }
+
 class Point{
 	int x=1;
 	int y=1;
