@@ -23,6 +23,7 @@ public class MethodEx3 {
 		
 
 	}
+	
 	public static void swap(int num1, int num2) {
 		int tmp=num1;
 		num1=num2;
