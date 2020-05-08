@@ -3,8 +3,7 @@ package Day10;
 public class AbstractEx1 {
 
 	public static void main(String[] args) {
-		
-		
+				
 	}
 
 }
