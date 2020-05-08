@@ -3,6 +3,7 @@ package Day1;
 public class ExamCasting {
 
 	public static void main(String[] args) {
+		
 		/* 정수형 변수 num에 실수 1.23을 저장하면 0.23이 사라지기 때문에 에러가 방생
 		이를 해결하기 위해 명시적 자료형 변환을 이용하여 1.23을 1로 바꾸어 저장 */
 		int num = (int)1.23;
