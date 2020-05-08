@@ -64,7 +64,7 @@ public class Main {
 //			학생 정보 수정
 			case 2:
 				
-				ModifyStd(sc, std, cnt);
+				modifyStd(sc, std, cnt);
 								
 				break;
 			
