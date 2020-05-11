@@ -1,22 +1,29 @@
-package Homework;
+package Day13;
 
 import java.util.Scanner;
 
-public class HomeworkEx2 {
+public class Homework2 {
 	
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
 		int size=30;
 		Product[] p=new Product[size];
 		char answer=0;
-		System.out.print("상품을 등록하겠습니까?(y/n) : ");
-		answer=sc.next().charAt(0);
+		int i=0;
 		while(answer!='n') {
+			System.out.print("상품을 등록하겠습니까?(y/n) : ");
+			answer=sc.next().charAt(0);
 			switch(answer) {
-			case 'y':
-				input(sc);
-		
+			case 'y':	case 'Y':
+				p[i++]=input(sc);
+				break;
+			case 'n':	case 'N':
+				break;
 			}
+		}
+		System.out.println("지금까지 등록된 상품 리스트");
+		for(int j=0; j<i; j++) {
+			System.out.printf("%d. 상품명 : %s, 가격 : %d%n", i, p[j].productName, p[j].price);
 		}
 	
 	}

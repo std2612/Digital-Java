@@ -1,8 +1,8 @@
-package Homework;
+package Day13;
 
 import java.util.Scanner;
 
-public class HomeworkEx1 {
+public class Homework1 {
 
 	public static void main(String[] args) {
 		int min=0, max=0; 
@@ -34,6 +34,7 @@ public class HomeworkEx1 {
 			
 		}
 		System.out.println("랜덤수 = "+tmp+" 정답입니다.");
+		sc.close();
 	}
 
 }
