@@ -13,8 +13,10 @@ public class ExceptionEx3 {
 		}
 	}
 	/* cal 메서드는 예외처리를 하지 않고 예외를 발생만 시킨다.
-	 * 예외처리는 main 메서드에서 할 것이다. */
-	public static double cal(int num1, char op, int num2) {
+	 * 예외처리는 main 메서드에서 할 것이다.
+	 * 발생한 예외가 RuntimeException이면 메서드 옆에 발생 가능한 예외를 생략해도 되지만
+	 * 아닌 경우는 메서드 옆에 발생 가능한 예외를 써 주어야 한다. */
+	public static double cal(int num1, char op, int num2) throws Exception {
 		double res=0.0;
 		switch(op) {
 		case'+':	res=num1+num2;	break;
@@ -30,7 +32,7 @@ public class ExceptionEx3 {
 			throw new ArithmeticException("0으로 나눌 수 없습니다.");
 		}
 		res=num1%num2;	break;
-		default: 	throw new ArithmeticException(op+"는 산술연산자가 아닙니다.");
+		default: 	throw new Exception(op+"는 산술연산자가 아닙니다.");
 		}
 		return res;
 	}
