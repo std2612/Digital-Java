@@ -17,6 +17,7 @@ public class ExceptionEx1 {
 		}catch(Exception e) {
 			System.out.println("예외 발생");
 		}
+		
 	}
 
 }
