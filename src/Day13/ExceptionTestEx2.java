@@ -20,10 +20,15 @@ public class ExceptionTestEx2 {
 				int num=sc.nextInt();
 			}
 		}catch(InputMismatchException e) {
-			System.out.println("예외가 발생했습니다 : 문자를 입력했습니다.");
+			System.out.println("예외가 발생했습니다 : 정수를 입력해야 하는데 문자를 입력했습니다.");
+			e.printStackTrace();
+		}catch(Exception e) {
+			
 		}finally {
 			sc.close();
+			System.out.println("프로그램을 종료합니다.");
 		}
+		
 	}
 
 }
