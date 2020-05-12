@@ -14,6 +14,7 @@ public class WrapperEx1 {
 		Double dnum2 = 1.23;
 		Double dnum3 = new Double(1.23);
 		
+		
 	}
 
 }
