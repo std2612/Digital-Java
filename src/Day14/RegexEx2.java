@@ -18,26 +18,29 @@ public class RegexEx2 {
 		 * Ex)
 		 * 아이디를 입력하세요 : abcde1
 		 * abcde1은 유효한 아이디입니다. */
-		Scanner sc = new Scanner(System.in);
+		Scanner s = new Scanner(System.in);
+		
 		String id;
+		
 		System.out.println("아이디의 조건");
 		System.out.println("1.알파벳 + 숫자");
 		System.out.println("2.첫글자 알파벳");
 		System.out.println("3.5글자 이상 10글자 이하");
 		System.out.print("아이디를 입력하세요 : ");
-		id = sc.next();
-		Pattern p = Pattern.compile("([a-zA-z]\\w{4,9})");
-		Matcher m = p.matcher(id);
-		if(!m.matches()) {
+		
+		id = s.next();
+		
+		Pattern p = Pattern.compile("[a-zA-z]\\w{4,9}");
+		
+		
+		if(p.matcher(id).matches()) {
+			System.out.println(id+"는 유효한 아이디입니다.");
+		}else {
 			System.out.println(id+"는 유효한 아이디가 아닙니다.");
 			id=null;
-			sc.close();
-			return;
-		}else {
-			sc.close();
-			System.out.println(id+"는 유효한 아이디입니다.");
 		}
-		
+		s.close();
+
 		
 	}
 
