@@ -15,6 +15,11 @@ public class TestEx2 {
 			sc.close();
 			return;
 		}
+		if(!isValid(regNum.substring(0,6))) {
+			System.out.println("유효하지 않은 생년월일입니다.");
+			sc.close();
+			return;
+		}
 		char gender = regNum.charAt(6);
 		switch(gender) {
 		case '1':	case '3':	case '9':
@@ -40,9 +45,18 @@ public class TestEx2 {
 		String sYear =	birth.substring(0,2);
 		String sMonth =	birth.substring(2,4);
 		String sDay =	birth.substring(4,6);
-		int year = Integer.parseInt(sYear);
-		int month = Integer.parseInt(sMonth);
-		int day = Integer.parseInt(sDay);
+		int year;
+		int month;
+		int day;
+		try {
+			year = Integer.parseInt(sYear);
+			month = Integer.parseInt(sMonth);
+			day = Integer.parseInt(sDay);
+		}catch(Exception e) {
+			return false;
+		}
+		
+		
 		int lastDay;
 		switch(month) {
 		case 1:	case 3:	case 5:	case 7:	case 8:	case 10:	case 12:
