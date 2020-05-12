@@ -17,6 +17,7 @@ public class ObjectEx1 {
 		}catch(Exception e) {
 			System.out.println(e.getMessage());
 		}
+		
 		System.out.println("------------");					// 깊은 복사
 		B b1=new B();
 		b1.a=new A();
@@ -25,11 +26,16 @@ public class ObjectEx1 {
 		System.out.println(b1.a.num+","+b2.a.num);
 		b2.a.num=20;
 		System.out.println(b1.a.num+","+b2.a.num);
+		
 		System.out.println("-------------");				// equals 예제
 		A a4=new A();
 		A a5=new A();
 		System.out.println(a4.num+","+a5.num);
 		System.out.println(a4.equals(a5));
+		
+		System.out.println("-------------");				// toString 예제
+		C c = new C();
+		System.out.println(c);
 		
 	}
 	
@@ -37,6 +43,7 @@ public class ObjectEx1 {
 }
 class A implements Cloneable{
 	int num;
+	
 	@Override
 	public Object clone() throws CloneNotSupportedException  {
 		return super.clone();
@@ -44,9 +51,11 @@ class A implements Cloneable{
 	public A() {
 		
 	}
+	
 	public A(int num) {
 		this.num=num;
 	}
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -54,6 +63,7 @@ class A implements Cloneable{
 		result = prime * result + num;
 		return result;
 	}
+	
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -71,6 +81,7 @@ class A implements Cloneable{
 }
 class B implements Cloneable{
 	A a;
+	
 	@Override
 	public B clone() {
 		B obj=null;
