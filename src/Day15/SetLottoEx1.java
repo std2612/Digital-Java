@@ -54,7 +54,7 @@ public class SetLottoEx1 {
 //	매개 변수 : int min, max
 //	리턴 타입 : int
 //	매서드명 : random
-	public static int random(int min, int max) {
+	public static Integer random(int min, int max) {
 		if(min>max) {
 			throw new ArithmeticException("최소값과 최대값 순서가 바뀌었습니다."); // 부모가 Runtime이라 throws 생략가능
 		}
