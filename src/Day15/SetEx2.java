@@ -5,7 +5,6 @@ import java.util.*;
 public class SetEx2 {
 
 	public static void main(String[] args) {
-		//로또 예제를 Set을 이용해 작성하시오.
 		HashSet<Integer> com=new HashSet<Integer>();
 		HashSet<Integer> user=new HashSet<Integer>();
 		
@@ -33,6 +32,7 @@ public class SetEx2 {
 				System.out.println(i+"번째로 가져온 두 값 "+num1+"과 "+num2+"은 다릅니다.");
 			}
 		}
+		sc.close();
 	}
 	
 	
