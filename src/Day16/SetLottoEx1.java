@@ -14,6 +14,7 @@ public class SetLottoEx1 {
 		HashSet<Integer> lotto=new HashSet<Integer>(size);
 		HashSet<Integer> auto=null;
 		Integer bonus=0;
+		
 		try {
 			auto = createRanArr(min, max, size);
 			createRanArr(min, max, lotto, size);
