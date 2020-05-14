@@ -1,4 +1,4 @@
-package Day15;
+package Day16;
 
 import java.util.*;
 
@@ -10,7 +10,7 @@ public class SetLottoEx1 {
 //		3. 맞은 갯수 체크 + 보너스 번호가 맞는지 체크
 //		4. 맞은 갯수와 보너스 번호 맞는지 여부에 따라 등수를 출력
 		int size=6;
-		int min=1, max=7;
+		int min=1, max=20;
 		HashSet<Integer> lotto=new HashSet<Integer>(size);
 		HashSet<Integer> auto=null;
 		Integer bonus=0;
