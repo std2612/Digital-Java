@@ -1,21 +1,35 @@
-package Student;
+package Day17;
 
 import java.util.*;
 
-public class ListBaseballGame1 {
+public class ListBaseballGame2 {
+	
+	public static void main(String[] args) {
+		BaseballGame.set(1, 20);
+		BaseballGame.play();
+		
+	}
+}
+
+class BaseballGame {
+	
 	static int size=3;
 	static int min=1, max=9;
 	static Scanner sc=new Scanner(System.in);
-		
+	
 //	1. 컴퓨터가 생성한 랜덤한 수를 저장하는 리스트 생성 : com
 	static List<Integer> com=new ArrayList<Integer>(size);
-			
-	public static void main(String[] args) {
+//	2. 사용자가 입력한 수를 저장하는 리스트 생성 : user
+	static List<Integer> user=new ArrayList<Integer>(size);
+	
+	public static void set(int min1, int max1) {
+		min=min1;
+		max=max1;
+	}
+	
+	public static void play() {
 		int strike=0, ball=0;
-		
-//		2. 사용자가 입력한 수를 저장하는 리스트 생성 : user
-		List<Integer> user=new ArrayList<Integer>(size);
-		
+
 //		3. 중복되지 않는 랜덤한 수 3개를 com에 저장
 		createComList();
 		
@@ -27,18 +41,18 @@ public class ListBaseballGame1 {
 //			4-2. 정수 세 개를 입력받아 중복된 애용이 있으면 다시 입력받게 함
 			user.clear();
 			
-			if(!insertUser(user)) {
+			if(!insertUser()) {
 				System.out.printf("입력한 숫자 중에 중복된 숫자가 있거나 입력된 숫자가 %d~%d사이의 숫자가 아닙니다.%n",min, max);
 				continue;
 			}
-			System.out.println(user);
+			System.out.println();
 			
 //			4-3. 스트라이크와 볼을 판별
 			strike=0;
 			ball=0;
-			strike=strike(user);
+			strike=strike();
 			
-			ball=ball(user);
+			ball=ball();
 			
 //			4-4. 판별한 스트라이크와 볼을 이용하여 출력
 			System.out.print("결과 : ");
@@ -63,7 +77,14 @@ public class ListBaseballGame1 {
 		sc.close();
 	}
 	
-	public static int random() {
+	public static int random(int min, int max) {
+		if(min>max) {
+			throw new ArithmeticException("예외 발생 : 최대값과 최소값의 순서가 바뀌었습니다.");
+		}
+		return new Random().nextInt(max-min+1)+1;
+	}
+	
+	private static int random() {
 		if(min>max) {
 			throw new ArithmeticException("예외 발생 : 최대값과 최소값의 순서가 바뀌었습니다.");
 		}
@@ -75,7 +96,7 @@ public class ListBaseballGame1 {
 //	리턴타입 : 배열이 매개 변수로 들어가므로 void
 //	메소드명 : createComList
 	
-	public static void createComList() {
+	private static void createComList() {
 		if(size>max-min+1) {
 			throw new ArithmeticException("랜덤 수의 범위 보다 만들어야하는 갯수가 더 많습니다.");
 		}
@@ -92,7 +113,7 @@ public class ListBaseballGame1 {
 //	리턴타입 : boolean
 //	메서드명 : createUserList
 	
-	public static boolean insertUser(List<Integer> user) {
+	private static boolean insertUser() {
 		int i=0;
 		System.out.printf("중복되지 않는 숫자 %d개를 입력하세요(%d~%d) : ",size ,min, max);
 		while(i++<size) {
@@ -114,7 +135,7 @@ public class ListBaseballGame1 {
 		return true;
 	}
 	
-	public static void createUserList(List<Integer> user) {
+	private static void createUserList() {
 		while(user.size()<size) {
 			Integer i=sc.nextInt();
 			if(user.contains(i)) {
@@ -126,7 +147,7 @@ public class ListBaseballGame1 {
 		}
 	}
 	
-	public static int strike(List<Integer> user) {
+	private static int strike() {
 		int cnt=0;
 		for(int i=0; i<size; i++) {
 			if(com.get(i)==user.get(i)) {
@@ -136,14 +157,14 @@ public class ListBaseballGame1 {
 		return cnt;
 	}
 	
-	public static int ball(List<Integer> user) {
+	private static int ball() {
 		int cnt=0;
 		for(int j=0; j<size; j++) {
 			if(com.contains(user.get(j))) {
 				cnt++;
 			}
 		}
-		return cnt-strike(user);
+		return cnt-strike();
 	}
 
 }
