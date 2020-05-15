@@ -5,13 +5,14 @@ import java.util.*;
 public class ListBaseballGame1 {
 	static int size=3;
 	static int min=1, max=9;
-	static Scanner sc=new Scanner(System.in);
-		
+			
 //	1. 컴퓨터가 생성한 랜덤한 수를 저장하는 리스트 생성 : com
 	static List<Integer> com=new ArrayList<Integer>(size);
 			
 	public static void main(String[] args) {
 		int strike=0, ball=0;
+		
+		Scanner sc=new Scanner(System.in);
 		
 //		2. 사용자가 입력한 수를 저장하는 리스트 생성 : user
 		List<Integer> user=new ArrayList<Integer>(size);
@@ -27,7 +28,7 @@ public class ListBaseballGame1 {
 //			4-2. 정수 세 개를 입력받아 중복된 애용이 있으면 다시 입력받게 함
 			user.clear();
 			
-			if(!insertUser(user)) {
+			if(!insertUser(user, sc)) {
 				System.out.printf("입력한 숫자 중에 중복된 숫자가 있거나 입력된 숫자가 %d~%d사이의 숫자가 아닙니다.%n",min, max);
 				continue;
 			}
@@ -92,7 +93,7 @@ public class ListBaseballGame1 {
 //	리턴타입 : boolean
 //	메서드명 : createUserList
 	
-	public static boolean insertUser(List<Integer> user) {
+	public static boolean insertUser(List<Integer> user, Scanner sc) {
 		int i=0;
 		System.out.printf("중복되지 않는 숫자 %d개를 입력하세요(%d~%d) : ",size ,min, max);
 		while(i++<size) {
@@ -114,7 +115,7 @@ public class ListBaseballGame1 {
 		return true;
 	}
 	
-	public static void createUserList(List<Integer> user) {
+	public static void createUserList(List<Integer> user, Scanner sc) {
 		while(user.size()<size) {
 			Integer i=sc.nextInt();
 			if(user.contains(i)) {

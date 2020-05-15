@@ -134,19 +134,7 @@ class BaseballGame {
 		user.addAll(tmpList);
 		return true;
 	}
-	
-	private static void createUserList() {
-		while(user.size()<size) {
-			Integer i=sc.nextInt();
-			if(user.contains(i)) {
-				System.out.println("중복된 수가 추가되지 않았습니다.");
-			}
-			if(!user.contains(i)) {
-				user.add(user.size(), i);
-			}
-		}
-	}
-	
+		
 	private static int strike() {
 		int cnt=0;
 		for(int i=0; i<size; i++) {
