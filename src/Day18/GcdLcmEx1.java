@@ -26,7 +26,8 @@ public class GcdLcmEx1 {
 			a=b;
 			b=tmp;
 		}
-		for(int i=1; i<=b; i++) {
+		
+		for(int i=1; i<=a; i++) {
 			if(a%i==0 && b%i==0) {
 				gcd=i;
 			}
@@ -36,7 +37,22 @@ public class GcdLcmEx1 {
 	}
 	
 	public static int lcm(int a, int b) {
-		return a*b/gcd(a, b);
+		int lcm=1;
+		
+		if(a>b) {
+			int tmp=a;
+			a=b;
+			b=tmp;
+		}
+		
+		for(int i=1; i<=a*b; i++) {
+			if(i%a==0 && i%b==0) {
+				lcm=i;
+				break;
+			}
+		}
+		
+		return lcm;
 	}
 	
 }
