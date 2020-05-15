@@ -32,6 +32,7 @@ public class GcdLcmEx1 {
 				gcd=i;
 			}
 		}
+		
 		return gcd;
 		
 	}
@@ -53,6 +54,7 @@ public class GcdLcmEx1 {
 		}
 		
 		return lcm;
+	
 	}
 	
 }
