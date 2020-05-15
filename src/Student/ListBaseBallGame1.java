@@ -1,18 +1,19 @@
-package Day16;
+package Student;
 
 import java.util.*;
 
-public class ListBaseBallEx1 {
+public class ListBaseBallGame1 {
 
 	public static void main(String[] args) {
 		int size=3;
 		int s=0, b=0;
+		int min=1, max=9;
 		
 		ArrayList<Integer> com=new ArrayList<Integer>(size);
 		ArrayList<Integer> user=new ArrayList<Integer>(size);
 		Scanner sc=new Scanner(System.in);
 		
-		createComList(com, size);
+		createComList(com, size, min, max);
 		
 		System.out.println(com);
 				
@@ -45,9 +46,16 @@ public class ListBaseBallEx1 {
 		sc.close();
 	}
 	
-	public static void createComList(ArrayList<Integer> com, int size) {
+	public static int random(int min, int max) {
+		if(min>max) {
+			throw new ArithmeticException("예외 발생 : 최대값과 최소값의 순서가 바뀌었습니다.");
+		}
+		return new Random().nextInt(max-min+1)+1;
+	}
+	
+	public static void createComList(ArrayList<Integer> com, int size, int min, int max) {
 		while(size>com.size()) {
-			Integer r=new Random().nextInt(9)+1;
+			Integer r=random(min, max);
 			if(!com.contains(r)) {
 				com.add(r);
 			}
