@@ -10,15 +10,16 @@ public class VariableEx2 {
 //	지역 변수 :				메소드를 실행하는데 있어서 자체적으로 사용하는 변수
 //						외부에서 알려주는 정보와 상관 없음
 //	매개 변수 :				메소드를 실행하는데 있어서 외부에서 필요해서 가져온 변수
-//						메소드 안에서
+//						메소드 안에서 매개변수 = 값; 과 같은 코드가 발생한다면 해당 매개변수는 지역변수로 바꿔도 되는 매개변수이다
 //						
 	public static void main(String[] args) {
-		Corona c1=new Corona();
-		List<Corona> list=new ArrayList<Corona>();
-		list.add(c1);
-		Corona c2=new Corona();
-		list.add(c2);
-		
+		Corona c1 = new Corona();
+		List<Corona> coronalist = new ArrayList<Corona>();
+		coronalist.add(c1);
+		Corona c2 = new Corona();
+		coronalist.add(c2);
+		System.out.println(Corona.cnt);
+		System.out.println(coronalist.size());
 	}
 
 }
@@ -28,11 +29,21 @@ class ClassRoom {
 	int maxCnt=20; // 정원
 	int i=0; // 메소드에서 반복문을 이용할 때 사용할 변수 => 멤버변수로 만드는 것은 부적절
 	String classNum="401호";
-	List<String> courseNameList=new ArrayList<String>();
-	
-	
+	List<String> courseNameList=new ArrayList<String>(); // 해당 강의장의 강의 리스트
+//	int i = 0; // 메소드에서 반복문을 이용할 때 사용할 변수 => 멤버 변수로 만드는 것은 부적절
+}
+
+class GreenArtClassRoom extends ClassRoom {
+	static String companyName = "그린 컴퓨터 아트 학원";
 }
 
 class Corona {
+	String name; // 환자 이름
+	String address; // 환자 주소
+	static int cnt; // 현재까지 누적 환자 수
+	int age; // 환자 나이
 	
+	public Corona() {
+		cnt++;
+	} 
 }
