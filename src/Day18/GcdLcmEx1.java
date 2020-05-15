@@ -19,7 +19,7 @@ public class GcdLcmEx1 {
 	}
 	
 	public static int gcd(int a, int b) {
-		int gcd=0;
+		int gcd=1;
 		
 		if(a>b) {
 			int tmp=a;
