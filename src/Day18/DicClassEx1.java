@@ -2,7 +2,7 @@ package Day18;
 
 import java.util.*;
 
-public class TestEx3 {
+public class DicClassEx1 {
 
 	public static void main(String[] args) {
 		
