@@ -6,47 +6,37 @@ public class TestEx4 {
 
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
-		int num1, num2;
 		
-		System.out.print("두 정수를 입력하세요 : ");
-		num1=sc.nextInt();
-		num2=sc.nextInt();
+		System.out.print("정수를 입력하세요 : ");
+		int num=sc.nextInt();
 		
 		try {
-			printIsCoPrime(num1, num2);
-		}catch (ArithmeticException e) {
-			System.out.println(e.getMessage());
+			if(isPrime(num)) {
+				System.out.printf("%d : 소수입니다.%n", num);
+			}else {
+				System.out.printf("%d : 합성수입니다.%n", num);
+			}
 		}catch (Exception e) {
-			System.out.println("예외 처리");
+			System.out.println(e.getMessage());
 		}
 		
 		sc.close();
 	}
 	
-	public static void printIsCoPrime(int num1, int num2) {
-		if(num1<0 || num2<0) {
-			throw new ArithmeticException("두 양의 정수가 필요합니다.");
+	public static boolean isPrime(int num) {
+		if(num==1) {
+			throw new ArithmeticException("예외 : 1은 소수도 아니고 합성수도 아닙니다.");
 		}
-		
-		if(num1>num2) {
-			int tmp=num1;
-			num1=num2;
-			num2=tmp;
+		if(num<1) {
+			throw new ArithmeticException("예외 : 0과 음수는 소수 판별을 할 수 없습니다.");
 		}
-		
-		int gcd=1;
-		
-		for(int i=1; i<=num1; i++) {
-			if(num1%i==0 && num2%i==0) {
-				gcd=i;
+		for(int i=2; i*i<=num; i++) {
+			if(num%i==0) {
+				return false;
 			}
 		}
 		
-		if(gcd==1) {
-			System.out.printf("%d와 %d는 서로소입니다.", num1, num2);
-		}
-		if(gcd!=1) {
-			System.out.printf("%d와 %d는 서로소가 아닙니다.", num1, num2);
-		}
+		return true;
 	}
+
 }

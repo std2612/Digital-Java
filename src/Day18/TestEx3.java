@@ -5,42 +5,47 @@ import java.util.*;
 public class TestEx3 {
 
 	public static void main(String[] args) {
-		Scanner sc=new Scanner(System.in);
 		
-		System.out.print("정수를 입력하세요 : ");
-		int num=sc.nextInt();
 		
-		try {
-			printIsPrime(num);
-		}catch (ArithmeticException e) {
-			System.out.println(e.getMessage());
-		}catch (Exception e) {
-			System.out.println("예외 처리");
-		}
-		
-		sc.close();
 	}
 	
-	public static void printIsPrime(int num) {
-		if(num<0) {
-			throw new ArithmeticException("양의 정수를 입력해주세요.");
-		}
-		
-		int cnt=0;
-		
-		for(int i=1; i*i<num; i++) {
-			if(num%i==0) {
-				cnt++;
-			}
-		}
-		
-		if(cnt==1) {
-			System.out.printf("%d는 소수입니다.%n", num);
-		}
-		if(cnt>1) {
-			System.out.printf("%d는 소수가 아닙니다.%n", num);
-		}
-		
-	}
+}
 
+class Word {
+	String word;
+	List<String> wordClass=new ArrayList<String>();
+	List<String> meaning=new ArrayList<String>();
+	
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((word == null) ? 0 : word.hashCode());
+		return result;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Word other = (Word) obj;
+		if (word == null) {
+			if (other.word != null)
+				return false;
+		} else if (!word.equals(other.word))
+			return false;
+		return true;
+	}
+}
+
+class Dic {
+	List<Word> list=new ArrayList<Word>();
+//	단어 추가
+//	단어 수정 => 품사 수정하거나 뜻을 수정
+//	단어 삭제
+//	단어 출력 => 한 단어의 정보를 출력하거나 특정 단어가 들어간 단어를 출력
 }

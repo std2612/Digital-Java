@@ -5,47 +5,41 @@ import java.util.*;
 public class TestEx2 {
 
 	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
 		
+		System.out.print("성적을 입력하세요(0~100) : ");
+		int score=sc.nextInt();
+		
+		try {
+			System.out.printf("입력받은 성적의 학점은 %s입니다.%n", grade(score));
+		}catch (ArithmeticException e) {
+			System.out.println(e.getMessage());
+		}catch (Exception e) {
+			System.out.println("예외 처리");
+		}
+		
+		sc.close();
 		
 	}
 	
-}
-
-class Word {
-	String word;
-	List<String> wordClass=new ArrayList<String>();
-	List<String> meaning=new ArrayList<String>();
-	
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((word == null) ? 0 : word.hashCode());
-		return result;
+	public static String grade(int score) {
+		if(score<0 || score>100) {
+			throw new ArithmeticException("성적의 범위는 0~100입니다.");
+		}
+				
+		if(score>=90) {
+			return "A";
+		}
+		if(score>=80) {
+			return "B";
+		}
+		if(score>=70) {
+			return "C";
+		}
+		if(score>=60) {
+			return "D";
+		}
+		return "F";
 	}
 	
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Word other = (Word) obj;
-		if (word == null) {
-			if (other.word != null)
-				return false;
-		} else if (!word.equals(other.word))
-			return false;
-		return true;
-	}
-}
-
-class Dic {
-	List<Word> list=new ArrayList<Word>();
-//	단어 추가
-//	단어 수정 => 품사 수정하거나 뜻을 수정
-//	단어 삭제
-//	단어 출력 => 한 단어의 정보를 출력하거나 특정 단어가 들어간 단어를 출력
 }

@@ -6,40 +6,62 @@ public class TestEx1 {
 
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
+		int a, b;
 		
-		System.out.print("성적을 입력하세요(0~100) : ");
-		int score=sc.nextInt();
+		System.out.print("두 정수를 입력하세요 : ");
+		a=sc.nextInt();
+		b=sc.nextInt();
 		
-		try {
-			System.out.printf("입력받은 성적의 학점은 %s입니다.%n", grade(score));
-		}catch (ArithmeticException e) {
-			System.out.println(e.getMessage());
-		}catch (Exception e) {
-			System.out.println("예외 처리");
-		}
+		System.out.printf("%d 와 %d 의 최대 공약수는 %d 입니다.%n", a, b, gcd(a, b));
+		System.out.printf("%d 와 %d 의 최소 공배수는 %d 입니다.%n", a, b, lcm(a, b));
 		
 		sc.close();
-		
 	}
 	
-	public static String grade(int score) {
-		if(score<0 || score>100) {
-			throw new ArithmeticException("성적의 범위는 0~100입니다.");
+//	기능 : 두 정수의 최대 공약수를 알려주는 메서드
+//	매개변수 : 두 정수 => int num`, int num2
+//	리턴타입 : 최대 공약수 => int
+//	메소드명 : gcd
+	
+	public static int gcd(int num1, int num2) {
+		if(num1<0 || num2<0) {
+			throw new ArithmeticException("예외 : 최대 공약수는 두 양의 정수가 필요합니다.");
 		}
-				
-		if(score>=90) {
-			return "A";
+		int gcd=1;
+		
+		if(num1>num2) {
+			int tmp=num1;
+			num1=num2;
+			num2=tmp;
 		}
-		if(score>=80) {
-			return "B";
+		
+		for(int i=num1; i>=1; i--) {
+			if(num1%i==0 && num2%i==0) {
+				gcd=i;
+				break;
+			}
 		}
-		if(score>=70) {
-			return "C";
+		return gcd;
+	}
+	
+	public static int lcm(int num1, int num2) {
+		int lcm=1;
+		
+		if(num1>num2) {
+			int tmp=num1;
+			num1=num2;
+			num2=tmp;
 		}
-		if(score>=60) {
-			return "D";
+		
+		for(int i=1; i<=num1*num2; i++) {
+			if(i%num1==0 && i%num2==0) {
+				lcm=i;
+				break;
+			}
 		}
-		return "F";
+		
+		return lcm;
+	
 	}
 	
 }
