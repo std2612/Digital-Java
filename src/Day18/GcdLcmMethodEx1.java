@@ -27,6 +27,7 @@ public class GcdLcmMethodEx1 {
 		if(num1<0 || num2<0) {
 			throw new ArithmeticException("예외 : 최대 공약수는 두 양의 정수가 필요합니다.");
 		}
+		
 		int gcd=1;
 		
 		if(num1>num2) {
@@ -41,6 +42,7 @@ public class GcdLcmMethodEx1 {
 				break;
 			}
 		}
+		
 		return gcd;
 	}
 	
