@@ -1,7 +1,7 @@
-package Day5;
+package Day05;
 
-import Day4.*;	// '*'는 모든이라는 의미
-import Day5_1.*;
+import Day04.*;	// '*'는 모든이라는 의미
+import Day05_1.*;
 
 public/*접근제한자*/ class ClassEx1/*클래스명*/ {
 
