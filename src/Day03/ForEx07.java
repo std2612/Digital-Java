@@ -1,8 +1,8 @@
-package Day3;
+package Day03;
 
 import java.util.Scanner;
 
-public class ForEx7 {
+public class ForEx07 {
 
 	public static void main(String[] args) {
 		/* 두 정수 num1과 num2의 최대 공약수를 구하는 코드를 작성하세요.
