@@ -1,6 +1,6 @@
 package Day02;
 
-public class ForEx1 {
+public class ForEx01 {
 
 	public static void main(String[] args) {
 		// for문 기본 예제 : Hello World! 5번 출력
