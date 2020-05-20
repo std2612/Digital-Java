@@ -1,6 +1,6 @@
 package Day02;
 
-public class IfEx1 {
+public class IfEx01 {
 
 	public static void main(String[] args) {
 		// if문 예제1
