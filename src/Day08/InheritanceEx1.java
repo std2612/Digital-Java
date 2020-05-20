@@ -1,4 +1,4 @@
-package Day8;
+package Day08;
 
 public class InheritanceEx1 {
 	public static void main(String[] args) {
