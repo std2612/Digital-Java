@@ -2,7 +2,7 @@ package Day02;
 
 import java.util.Scanner;
 
-public class IfEx02 {
+public class IfEx2 {
 
 	public static void main(String[] args) {
 		/* 변수 num를 선언하고 num의 초기값을 설정하여 
