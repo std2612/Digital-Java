@@ -1,6 +1,6 @@
 package Day02;
 
-public class ForEx3 {
+public class ForEx03 {
 
 	public static void main(String[] args) {
 		// 1부터 10까지의 합을 구하는 코드를 for문으로 작성하세요.
