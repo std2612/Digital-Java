@@ -8,6 +8,7 @@ public class RecursiveEx3 {
 		System.out.println(sum(100));
 		System.out.println(sum(-1,10));
 	}
+	
 	//1부터 10까지 합을 구하는 코드를 재귀메소드로 작성해보세요.
 	/* 10 + 9 + 8 + 7 + ... + 1 
 	 * 10 + sum(9)
