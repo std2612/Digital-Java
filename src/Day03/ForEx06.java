@@ -1,8 +1,8 @@
-package Day3;
+package Day03;
 
 import java.util.Scanner;
 
-public class ForEx6 {
+public class ForEx06 {
 
 	public static void main(String[] args) {
 		// 정수 num가 소수인지 아닌지 판별하는 코드를 for문을 이용하여 작성하세요.
