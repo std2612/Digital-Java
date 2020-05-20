@@ -177,6 +177,7 @@ public class DicEx2 {
 						
 						System.out.println("의미가 삭제 되었습니다.");
 						System.out.println();
+						
 						break;
 					}
 				}
