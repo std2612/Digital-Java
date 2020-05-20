@@ -1,4 +1,4 @@
-package Day5_1;
+package Day05_1;
 /* 클래스에 접근제한자 public이 붙는 조건
  *  - 파일명과 클래스 이름이 같은 경우에만 public을 붙을 수 있다.
  * */
