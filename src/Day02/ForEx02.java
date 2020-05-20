@@ -1,6 +1,6 @@
 package Day02;
 
-public class ForEx2 {
+public class ForEx02 {
 
 	public static void main(String[] args) {
 		// 구구단 7단을 출력하는 코드를 for문을 이용하여 작성하세요.
