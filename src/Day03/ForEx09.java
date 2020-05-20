@@ -1,6 +1,6 @@
-package Day3;
+package Day03;
 
-public class ForEx9 {
+public class ForEx09 {
 
 	public static void main(String[] args) {
 		/* *****
