@@ -1,6 +1,6 @@
-package Day3;
+package Day03;
 
-public class ForEx8 {
+public class ForEx08 {
 
 	public static void main(String[] args) {
 		for(int i=1; i<=5; i+=1) {
