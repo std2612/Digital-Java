@@ -145,6 +145,7 @@ public class DicEx1 {
 					System.out.println("이미 있는 의미입니다.");
 					return false;
 				}
+				
 				mc.put(tmpm, tmpwc);
 				System.out.println("품사와 의미가 추가되었습니다.");
 				System.out.println();
