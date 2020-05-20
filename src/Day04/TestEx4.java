@@ -1,6 +1,6 @@
-package Day4;
+package Day04;
 
-public class TestEx5 {
+public class TestEx4 {
 
 	public static void main(String[] args) {
 		/* 배열의 내용을 정렬하는 예제*/
