@@ -1,4 +1,4 @@
-package Day9;
+package Day09;
 
 public class Square extends Shape {
 	private static int squareCount;

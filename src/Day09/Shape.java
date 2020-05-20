@@ -1,4 +1,4 @@
-package Day9;
+package Day09;
 
 public class Shape{
 	private int left;//시작점의 x 좌표
