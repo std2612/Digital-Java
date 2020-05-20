@@ -2,7 +2,7 @@ package Day02;
 
 import java.util.Scanner;
 
-public class IfEx3 {
+public class IfEx03 {
 
 	public static void main(String[] args) {
 		/* 정수형 변수 num를 선언하고, num의 값을 초기화하여
