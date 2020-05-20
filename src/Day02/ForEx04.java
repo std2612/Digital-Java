@@ -2,7 +2,7 @@ package Day02;
 
 import java.util.Scanner;
 
-public class ForEx4 {
+public class ForEx04 {
 
 	public static void main(String[] args) {
 		// num가 주어지면 주어진 num의 약수를 출력하는 코드를 for문으로 작성하세요.
