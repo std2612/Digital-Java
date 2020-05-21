@@ -194,12 +194,8 @@ public class DicEx1 {
 	}
 	
 	public static Word tmpWord(Scanner sc) {
-		Word w=new Word();
-		
 		System.out.print("단어를 입력하세요 : ");
-		w.setName(sc.next());
-		
-		return w;
+		return new Word(sc.next(), null);
 	}
 	
 	public static boolean printWord(Word w, List<Word> dic) {
@@ -231,6 +227,7 @@ public class DicEx1 {
 }
 
 class Word {
+	
 	String name;
 	Map<String, String> meaningClass= new HashMap<String, String>();
 	
