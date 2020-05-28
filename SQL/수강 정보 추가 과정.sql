@@ -21,3 +21,8 @@ select * from student;
 insert into attend(at_st_num, at_co_code)
 	values(2020110012,'2020_MSC001_1_2');
 select * from attend;
+
+-- 6. 지도 등록
+insert into coach(ch_pr_num, ch_st_num)
+	values(2020110002, 2020110012);
+select * from coach;
