@@ -1,6 +1,6 @@
 -- 성이 홍씨인 모든 학생들의 정보를 출력
 select * from student where st_name like '홍%';
-
+ 
 -- 학번이 2020인 모든 학생들의 정보를 출력
 select * from student where st_num like '2020%';
 
