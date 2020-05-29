@@ -61,7 +61,7 @@ select co_code, su_title
 -- 임꺽정 학생이 현재까지 수강한 과목의 총 학점은?
 select (st_name) 이름, sum(su_point) as 누적학점
 	from attend
-		join (select * from student where st_name='임꺽정') as '임꺽정의 학생정보'
+		join (select * from student where st_name='임꺽정') as slctst
         on at_st_num=st_num
         join course
         on at_co_code=co_code
