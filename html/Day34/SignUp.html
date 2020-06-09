@@ -22,6 +22,7 @@
 
         a{
             text-decoration: none;
+            color: black;
         }
 
         .logo{
@@ -35,12 +36,11 @@
             font-weight: 900;
         }
 
-        .text-id,
-        .text-pw,
-        .text-name,
-        .text-birth,
-        .text-gender,
-        .text-bold,
+        .text-id, 
+		.text-pw, 
+		.text-name,
+		.text-birth,
+		.text-gender,
         .text-phone{
             font-weight: bold;
         }
@@ -50,36 +50,24 @@
             color: gray;
         }
 
-        .box-id,
-        .box-pw,
-        .box-name,
-        .box-year,
-        .box-month,
-        .box-day,
-        .box-gender,
-        .box-email,
-        .box-country,
-        .box-number-in,
-        .btn-certification,
+        .box-id, 
+		.box-pw, 
+		.box-name,
+		.box-year,
+		.box-month,
+		.box-day,
+		.box-gender,
+		.box-email,
+		.box-country,
+		.box-number-in,
         .box-certification{
             height: 51px;
-            border: solid 1px rgb(218, 218, 218);
+            border: rgb(218, 218, 218) 1px solid;
             background-color: #fff;
             margin-top: 10px;
             margin-bottom: 20px;
             padding: 10px 14px 10px 14px;
             box-sizing: border-box;
-        }
-
-        .box-number-in{
-            width: calc(100% - 125px);
-            float: left;
-        }
-
-        .box.number::after{
-            clear: both;
-            content: '';
-            display: block;
         }
 
         .box-certification{
@@ -99,6 +87,17 @@
             margin-right: 10px;
         }
 
+        .box-number-in{
+            width: calc(100% - 115px - 10px);
+            float: left;
+        }
+
+        .box.number::after{
+            clear: both;
+            content: '';
+            display: block;
+        }
+               
         .box-id>input{
             height: 29px;
             width: calc(100% - 100px);
@@ -127,11 +126,11 @@
         }
 
         .box-name>input,
-        .box-email>input,
         .box-year>input,
         .box-day>input,
         .box-month>select,
         .box-gender>select,
+        .box-email>input,
         .box-country>select,
         .box-certification>input,
         .box-number-in>input{
@@ -142,15 +141,16 @@
 
         .btn-certification{
             height: 51px;
-            width: 115px;
-            background-color: #03c75a;
-            border: none;
-            float: right;
-            display: block;
-            color: #fff;
-            font-size: 13px;
-            text-align: center;
-            line-height: 51px;
+			background-color: rgb(0, 200, 80);
+			border: none;
+			width: 115px;
+			display: block;
+			margin-top: 10px;
+			float: left;
+			margin-left: 10px;
+			line-height: 51px;
+			color: #fff;
+			font-weight: bold;
         }
 
         .btn-submit{
@@ -159,9 +159,10 @@
             background-color: #03c75a;
             color: #fff;
             font-weight: bold;
-            height: 50px;
-            line-height: 50px;
+            height: 51px;
+            line-height: 51px;
             font-size: 24px;
+            border: none;
         }
     </style>
 </head>
@@ -245,7 +246,7 @@
             <div class="text-phone">휴대전화</div>
             <div class="box-phone">
                 <div class="box-country">
-                    <select name="country" id="phone">
+                    <select name="country" id="country">
                         <option value="+82" selected>대한민국 +82</option>
                         <option value="+1">미국/캐나다 +1</option>
                         <option value="+86">중국 +86</option>
@@ -255,7 +256,7 @@
                     <div class="box-number-in">
                         <input type="text" name="number" id="number" placeholder="전화번호 입력">
                     </div>
-                    <div class="btn-certification">인증번호 받기</div>
+                    <button class="btn-certification">인증번호 받기</button>
                 </div>
                 <div class="box-certification">
                     <input type="text" disabled placeholder="인증번호 입력하세요">
